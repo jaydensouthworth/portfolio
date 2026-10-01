@@ -116,7 +116,8 @@
           "title": "Keeping the order and the shelves in sync",
           "body": "One Go server renders HTML, with HTMX updating forms and page fragments. Checkout saves the order and deducts stock in one SQLite transaction. Repeat submissions return the existing order; inventory adjustments keep an audit trail, and fulfillment changes follow guarded transitions."
         }
-      }
+      },
+      "demo": "https://instoreshopperexample-site-3az7di-fdadf8-2-25-70-220.sslip.io"
     }
   ],
   "github": "https://github.com/jaydensrealm",
