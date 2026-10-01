@@ -1,0 +1,32 @@
+/* The reading document inhabits the same three color worlds. */
+body.reduced[data-design="ink"][data-world="0"] .site-header{background:#473d8ef5;border-color:#8b80c54d}
+body.reduced[data-design="ink"][data-world="1"] .site-header{background:#2d1932f7;border-color:#a7685b80}
+body.reduced[data-design="ink"][data-world="2"] .site-header{background:#061a2df7;border-color:#29607580}
+body.reduced[data-design="ink"] .site-header .brand,body.reduced[data-design="ink"] .site-header .nav a,body.reduced[data-design="ink"] .site-header .motion-toggle{color:#e1eef6}
+body.reduced[data-design="ink"] .site-header .brand small{color:#b9d8e2}
+body.reduced[data-design="ink"] .site-header .nav a[aria-current]{color:#e8fffb;text-decoration-color:#68d8d8}
+body.reduced[data-design="ink"] .reader-current{opacity:.65}
+body.reduced[data-design="ink"] .work{background:linear-gradient(145deg,#593145,#3b233b 46%,#29182f);color:#f6e7d2}
+body.reduced[data-design="ink"] .ink-work-sheet{color:#f6e7d2}
+body.reduced[data-design="ink"] .ink-sheet-heading{border-color:#c4977380}
+body.reduced[data-design="ink"] .ink-sheet-heading h2,body.reduced[data-design="ink"] .ink-feature h3,body.reduced[data-design="ink"] .ink-index-entry h3{color:#fff2db}
+body.reduced[data-design="ink"] .ink-sheet-heading h2>span{color:#ffc87c}
+body.reduced[data-design="ink"] .ink-sheet-heading .ink-section-label,body.reduced[data-design="ink"] .ink-sheet-heading .ink-training-note,body.reduced[data-design="ink"] .ink-note-top,body.reduced[data-design="ink"] .ink-project-kind,body.reduced[data-design="ink"] .ink-index-number,body.reduced[data-design="ink"] .ink-stack,body.reduced[data-design="ink"] .ink-feature-bottom>.ink-stack,body.reduced[data-design="ink"] .ink-role>span{color:#dcc0a6}
+body.reduced[data-design="ink"] .ink-feature-copy>p,body.reduced[data-design="ink"] .ink-feature .ink-role,body.reduced[data-design="ink"] .ink-feature-copy>.project-detail,body.reduced[data-design="ink"] .ink-index-entry p{color:#efddc8}
+body.reduced[data-design="ink"] .project-detail h4{color:#ffd498}
+body.reduced[data-design="ink"] .ink-index-entry{border-color:#c894714d}
+body.reduced[data-design="ink"] .ink-case-link,body.reduced[data-design="ink"] .ink-sheet-footer .text-button{color:#ffdaa4;border-color:#d9995c}
+body.reduced[data-design="ink"] .ink-index-entry h3 .folio-arrow{color:#ffc482}
+body.reduced[data-design="ink"] .ink-feature-visual .project-flow{border-color:#df9856}
+body.reduced[data-design="ink"] .ink-feature-visual .flow-mobile>span{background:#d2a479;border-color:#f0ce9a;color:#4b2834}
+body.reduced[data-design="ink"] .ink-feature-visual .flow-mobile>span:first-child{background:#ffe4b0;color:#4b2834}
+body.reduced[data-design="ink"] .ink-feature-visual .flow-mobile>span:nth-child(2){background:#e6bd84;color:#4b2834;border-color:#f0ce9a}
+body.reduced[data-design="ink"] .ink-index-visual .flow-mobile>span{background:#65384a;border-color:#b78067;color:#ffebce}
+body.reduced[data-design="ink"] .ink-feature-visual .project-flow figcaption,body.reduced[data-design="ink"] .ink-feature-visual .project-flow figcaption>span,body.reduced[data-design="ink"] .ink-index-visual .project-flow figcaption,body.reduced[data-design="ink"] .ink-index-visual .project-flow figcaption>span{color:#dcc0a6;border-color:#b1856e}
+body.reduced[data-design="ink"] .ink-sheet-footer{border-color:#c894714d}
+body.reduced[data-design="ink"] .ink-sheet-footer>span{color:#dcc0a6}
+body.reduced[data-design="ink"] .about{background:linear-gradient(135deg,#000420,#03273a 58%,#063a43);color:#d9fff1}
+body.reduced[data-design="ink"] .ink-about h2,body.reduced[data-design="ink"] .ink-experiment h3{color:#dcfff1}
+body.reduced[data-design="ink"] .ink-about .about-intro,body.reduced[data-design="ink"] .ink-experiment p,body.reduced[data-design="ink"] .reader-background p{color:#c0e3dc}
+body.reduced[data-design="ink"] .ink-person-label,body.reduced[data-design="ink"] .reader-background h3,body.reduced[data-design="ink"] .ink-experiment .ink-stack{color:#77d9c9}
+body.reduced[data-design="ink"] .ink-experiment,body.reduced[data-design="ink"] .reader-background,body.reduced[data-design="ink"] .ink-about .about-actions{border-color:#36927d70}

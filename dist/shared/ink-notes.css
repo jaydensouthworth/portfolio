@@ -1,0 +1,37 @@
+/* Project notes share the warm material palette of their work realm. */
+.ink-case{background:#fff6e5;border-color:#ba875d;border-left:4px solid #b77743;color:#392338}
+.ink-case h2{color:#422937}.ink-case .dialog-close{color:#654333}
+.ink-case .case-kicker,.ink-case .ink-case-stack,.ink-case .case-note{color:#775949}
+.ink-case .case-intro,.ink-case .ink-contribution p{color:#574034}
+.ink-case .ink-contribution h3{color:#945c36}
+.ink-case .case-note,.ink-case .ink-contribution,.ink-case .project-flow{border-color:#d3b59c}
+.ink-case .project-flow svg rect{fill:#f1d6b7;stroke:#bc8b64}
+.ink-case .project-flow svg text{fill:#593e30}.ink-case .project-flow svg .flow-line{stroke:#a56b41}
+.ink-case .project-flow figcaption{color:#775949}
+
+/* Comfortable controls and consistent interior spacing across each palette. */
+.case-dialog{--dialog-surface:#071020;padding:18px 34px 32px;scroll-padding-top:70px;scrollbar-gutter:stable}
+.case-dialog.ink-case{--dialog-surface:#fff6e5}
+.case-dialog .dialog-close{position:sticky;top:-18px;right:auto;z-index:4;width:max-content;min-height:46px;margin:0 -12px 18px auto;padding:10px 13px;background:var(--dialog-surface);border-bottom:1px solid currentColor;box-shadow:0 9px 0 var(--dialog-surface);font-size:13px}
+.case-dialog .case-kicker{margin-top:0;line-height:1.5}
+.case-dialog .note-source,.case-dialog .external-link{display:inline-flex;align-items:center;min-height:44px;line-height:1.5;padding:8px 0;overflow-wrap:anywhere}
+.case-dialog .contact-explore summary{padding:12px 0;line-height:1.5}
+.case-dialog .contact-explore button{padding:14px 0;min-height:56px}
+.case-dialog :focus-visible{outline-offset:3px}
+body[data-design="ink"] .ink-case-link,body[data-design="ink"] .ink-index-entry h3 button{min-height:44px}
+body[data-design="ink"] .contact-links a{min-height:44px}
+body[data-design="ink"] .ink-contact .about-actions .text-button{min-height:44px}
+body[data-design="ink"] .ink-sheet-footer{padding:6px 0 10px}
+body[data-design="ink"] .ink-sheet-footer button{min-height:44px}
+.entry-origin{position:relative}
+.entry-origin::after{content:"";position:absolute;inset:-10px -5px;min-height:44px}
+@media(hover:hover){.ink-case-link:hover,.ink-index-entry h3 button:hover,.contact-links a:hover,.text-button:hover{color:var(--accent);text-decoration-thickness:2px}.case-dialog .dialog-close:hover{filter:brightness(1.08)}}
+@media(max-width:760px){
+ .case-dialog{width:calc(100% - 24px);max-height:calc(100svh - 24px);padding:14px 22px 28px}
+ .case-dialog .dialog-close{top:-14px;margin:0 -8px 20px auto;min-height:48px;padding:11px 12px}
+ .case-dialog h2{overflow-wrap:break-word}
+ body[data-design="ink"] .ink-sheet-footer{gap:16px;padding-bottom:10px}
+ body[data-design="ink"] .ink-index-entry{padding-top:12px;padding-bottom:14px}
+ .contact-links{gap:30px}
+}
+@media(max-width:360px){.case-dialog{padding-left:18px;padding-right:18px}.case-dialog .ink-contribution{gap:12px}}

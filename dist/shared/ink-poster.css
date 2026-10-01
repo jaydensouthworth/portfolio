@@ -1,0 +1,41 @@
+/* A deliberately oversized, unevenly set name. The letters are live text.
+   The portal occupies a measured gap instead of covering a word. */
+body[data-design="ink"] .ink-poster{padding:0;overflow:visible}
+body[data-design="ink"] .ink-poster h1{position:absolute;inset:0;width:100%;height:100%;max-width:none;margin:0;font-family:'Realm Display',Impact,'Arial Narrow',sans-serif;pointer-events:none}
+body[data-design="ink"] .poster-word{position:absolute;display:block;white-space:nowrap;line-height:1;letter-spacing:-.035em;transform-origin:top left}
+body[data-design="ink"] .poster-jayden{left:3.3vw;top:10.2svh;font-size:min(27.5vw,39svh);transform:rotate(-1deg);color:#e6f7ff}
+body[data-design="ink"] .poster-realm{left:4.5vw;top:43svh;font-size:min(25.5vw,43svh);transform:rotate(1deg);letter-spacing:-.02em;color:#050a17;-webkit-text-stroke:1.3px #e6f7ff;text-shadow:4px 3px 0 #07bccc,8px 7px 0 #7e2553}
+.ink-poster .letter{display:inline-block;font-weight:700;transform-origin:50% 80%}
+.poster-jayden .letter-0{transform:rotate(-2.7deg) translateY(.018em)}
+.poster-jayden .letter-2{transform:rotate(1.8deg) translateY(-.018em)}
+.poster-jayden .letter-4{transform:rotate(-1.1deg) translateY(.012em)}
+.poster-jayden .letter-6{color:#ff4875;transform:rotate(12deg) translate(.015em,-.025em)}
+.poster-jayden .letter-7{transform:rotate(2deg) translateY(.025em)}
+.poster-realm .letter-0{transform:rotate(-2deg)}
+.poster-realm .letter-1{transform:translateY(.025em)}
+.poster-realm .letter-2{transform:rotate(-3deg) translateY(-.025em)}
+.poster-realm .letter-3{transform:rotate(2deg) translateY(.018em)}
+.poster-realm .letter-4{transform:rotate(-1deg) translateY(-.006em)}
+.ink-portal-slot{position:absolute;left:72vw;top:44svh;width:24vw;height:42svh;pointer-events:none;visibility:hidden}
+body[data-design="ink"] .ink-poster .entry-caption{position:absolute;left:5vw;right:auto;bottom:29px;display:flex;align-items:center;gap:54px;background:none}
+body[data-design="ink"] .ink-poster .eyebrow{font-size:14px;line-height:1.5;margin:0;color:#c7d9df}
+.ink-poster .eyebrow>span{display:block;color:#8ea4b8;font:12px/1.6 ui-monospace,monospace}
+body[data-design="ink"] .ink-poster .enter-button{font:italic 21px/1.3 Georgia,serif;margin:0;padding:9px 0;min-height:44px;color:#e6f7ff;border-color:#07bccc}
+@media(max-width:760px){
+ body[data-design="ink"] .ink-poster h1{inset:0;width:100%;height:100%;font-size:inherit}
+ body[data-design="ink"] .poster-jayden{left:16px;top:calc(78px + 1.2svh);font-size:min(38vw,23svh);transform:rotate(-1.4deg) scaleX(.74);letter-spacing:-.035em}
+ body[data-design="ink"] .poster-realm{left:12px;top:61svh;font-size:56vw;transform:rotate(1deg) scaleX(.64);letter-spacing:-.025em;text-shadow:3px 3px 0 #07bccc,7px 6px 0 #7e2553;-webkit-text-stroke:1px #e6f7ff}
+ .ink-portal-slot{left:18vw;top:31svh;width:65vw;height:29svh}
+ body[data-design="ink"] .ink-poster .entry-caption{left:21px;right:21px;bottom:20px;justify-content:space-between;gap:15px}
+ body[data-design="ink"] .ink-poster .eyebrow{font-size:12px;line-height:1.4}.ink-poster .eyebrow>span{font-size:10px}
+ body[data-design="ink"] .ink-poster .enter-button{font-size:19px;min-height:44px;white-space:nowrap}
+}
+@media(max-width:760px) and (max-height:760px){body[data-design="ink"] .poster-realm{transform:rotate(1deg) scale(.64,.82)}}
+@media(max-width:760px) and (max-height:650px){body[data-design="ink"] .poster-realm{transform:rotate(1deg) scale(.64,.72)}}
+body.reduced[data-design="ink"] .ink-poster{padding:115px 24px 65px;min-height:100svh;display:flex;flex-direction:column;justify-content:center}
+body.reduced[data-design="ink"] .ink-poster h1{position:relative;inset:auto;width:100%;height:auto;overflow:visible;margin:0}
+body.reduced[data-design="ink"] .poster-word{position:relative;inset:auto;display:block;font-size:clamp(52px,26vw,200px);transform:none;line-height:1.05;white-space:nowrap}
+body.reduced[data-design="ink"] .poster-realm{font-size:clamp(70px,33vw,240px);margin-top:12px}
+body.reduced[data-design="ink"] .ink-poster .entry-caption{position:relative;inset:auto;display:flex;flex-wrap:wrap;justify-content:space-between;margin-top:45px;max-width:680px}
+body.reduced[data-design="ink"] .ink-portal-slot{display:none}
+@media(prefers-reduced-motion:reduce){.ink-poster .letter{transform:none}}

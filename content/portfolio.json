@@ -1,0 +1,150 @@
+{
+  "name": "Jayden Southworth",
+  "role": "Software developer",
+  "intro": "I build software, tools, and experiments around the problem at hand.",
+  "bio": "My work spans personal tools, game mods, and web applications. I like turning a complicated problem into something clear to use and straightforward to maintain.",
+  "background": "Alongside personal programming projects, I’ve worked in customer-facing, team leadership, and operations roles. That experience shapes how I think about the people on the other side of an interface.",
+  "education": "Merit America · Full-stack development · 2022",
+  "educationDetail": "Merit America’s 30-week full-stack development program, completed in 2022, covered Java, SQL and Spring, client-server programming, and React. Additional Front-End Web Development with React certificate through the Hong Kong University of Science and Technology on Coursera, 2022.",
+  "skills": [
+    {
+      "name": "Interface",
+      "items": [
+        "React",
+        "JavaScript",
+        "Redux",
+        "HTML + CSS",
+        "Jest"
+      ],
+      "example": "In Beertraunteer, I worked on frontend UX, components, tests, and API integration."
+    },
+    {
+      "name": "Application",
+      "items": [
+        "Java",
+        "Spring Boot",
+        "REST APIs",
+        "JUnit"
+      ],
+      "example": "My training projects included client-server request flows, program-state design, and refactoring larger functions into smaller methods."
+    },
+    {
+      "name": "Data & workflow",
+      "items": [
+        "PostgreSQL",
+        "SQL",
+        "Git",
+        "CI/CD",
+        "Agile"
+      ],
+      "example": "The projects here include database-backed application flows and file-based inventory and transaction logs."
+    }
+  ],
+  "projects": [
+    {
+      "id": "vendo",
+      "name": "Vendo-Matic 800",
+      "type": "Command-line application",
+      "summary": "A vending-machine flow from deposit to product selection and correct change.",
+      "stack": [
+        "Java",
+        "OOP",
+        "File I/O"
+      ],
+      "detail": "A virtual vending machine with a command-line interface. Inventory is read from a text file, and transactions are logged back to a file.",
+      "contribution": "I worked on program-state design and refactored complex functions into smaller methods, making the transaction flow easier to follow.",
+      "focus": [
+        "Program state",
+        "Inventory loading",
+        "Transaction logging"
+      ],
+      "notes": {
+        "overview": "Vendo-Matic 800 models a vending machine in a command-line application. It reads inventory from a text file and writes transactions to a log. The flow runs from a deposit and product selection through to change.",
+        "detail": {
+          "title": "From inventory to a transaction log",
+          "body": "The inventory enters through a text file; transactions are written to a log. Between those file operations, the program handles the deposit, product selection, and change. The refactoring work focused on breaking larger functions into smaller methods around that flow."
+        }
+      }
+    },
+    {
+      "id": "tenmo",
+      "name": "TEnmo",
+      "type": "Client + API application",
+      "summary": "Peer-to-peer transfer requests, approvals, and account interactions.",
+      "stack": [
+        "Java",
+        "Spring Boot",
+        "PostgreSQL"
+      ],
+      "detail": "A command-line client communicates with a REST API so users can send, request, and approve money transfers. The backend uses Spring Data JPA and Spring Security.",
+      "contribution": "I worked on API request exchanges, server-side architecture, and the client-side connection logic that joins the flow together.",
+      "focus": [
+        "REST contracts",
+        "Client-server flow",
+        "Persistence"
+      ],
+      "notes": {
+        "overview": "TEnmo uses a command-line client and a REST API to let users send, request, and approve money transfers. The backend uses Spring Data JPA and Spring Security, with PostgreSQL for data storage.",
+        "detail": {
+          "title": "Across the client-server boundary",
+          "body": "The command-line interface is the user’s entry point. Requests cross into the REST API, with PostgreSQL behind the application’s data."
+        }
+      }
+    },
+    {
+      "id": "beer",
+      "name": "Beertraunteer",
+      "type": "Full-stack web application",
+      "summary": "A responsive brewery experience connecting discovery, beers, and events.",
+      "stack": [
+        "React",
+        "Java",
+        "PostgreSQL"
+      ],
+      "detail": "A brewery application with custom brewery, event, and beer information, plus brewery search by type. A React interface communicates with a REST backend using Spring Data JPA and Spring Security.",
+      "contribution": "I designed and developed the frontend UX, built React components and tests, and integrated frontend communication with the backend API.",
+      "focus": [
+        "Frontend UX",
+        "Responsive components",
+        "API integration"
+      ],
+      "notes": {
+        "overview": "Beertraunteer brings brewery, beer, and event information into one application. Users can search for breweries by type and explore the related information. A React interface communicates with a REST backend using Spring Data JPA and Spring Security."
+      }
+    }
+  ],
+  "github": "https://github.com/jaydensrealm",
+  "portfolioSource": "https://github.com/jaydensrealm/portfolio",
+  "experiment": {
+    "name": "Aethel",
+    "type": "Public prototype",
+    "summary": "A structured-writing experiment built with SvelteKit, TypeScript and TipTap/ProseMirror. Explores object-reference chips, timeline state, undo/redo, browser persistence, and JSON import/export.",
+    "source": "https://github.com/jaydensouthworth/aethel",
+    "sections": [
+      {
+        "title": "References inside the text",
+        "body": "A custom TipTap extension turns a double-bracket reference into an inline chip. It stores the object’s identifier separately from the displayed text, along with its status and color. Clicking a resolved chip can open the referenced object.",
+        "source": "https://github.com/jaydensouthworth/aethel/blob/main/src/lib/editor/extensions/object-ref.ts",
+        "sourceLabel": "Reference extension source"
+      },
+      {
+        "title": "Reversible changes",
+        "body": "The editor’s history system supports undo and redo. Related operations can be grouped into one history entry; undo runs the group in reverse, and redo reapplies it in order.",
+        "source": "https://github.com/jaydensouthworth/aethel/blob/main/src/lib/services/editor/history.ts",
+        "sourceLabel": "Undo/redo source"
+      },
+      {
+        "title": "A project you can save",
+        "body": "The serialization layer gathers objects, timeline placements and timeslots, milestones, and interface state into a project file. Browser import and export use JSON, including the .aethel file extension. Import checks the expected project structure before restoring it.",
+        "source": "https://github.com/jaydensouthworth/aethel/blob/main/src/lib/services/serialization.ts",
+        "sourceLabel": "Project serialization source"
+      }
+    ]
+  },
+  "originCaption": "I like to write, and build things, sometimes.",
+  "origin": [
+    "A lot of my coding has been personal work: modding games, fixing mods, and learning on my own.",
+    "My projects range from game mods and web applications to Aethel, a structured-writing prototype. I learn what the problem calls for and build from there."
+  ],
+  "identityCaption": "Developer · Problem solver"
+}

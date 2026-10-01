@@ -1,0 +1,27 @@
+/* Native travel stays in its own stationary viewport. */
+.nav-toggle{display:none}#site-controls{display:contents}
+@media(max-width:760px){
+ body:not(.reduced)[data-design="ink"] .site-header,body.reduced[data-design="ink"] .site-header{display:flex;align-items:center;justify-content:space-between;gap:18px;height:76px;min-height:76px;padding:12px max(20px,env(safe-area-inset-right)) 12px max(20px,env(safe-area-inset-left))}
+ body[data-design="ink"] .site-header .brand{font-size:14px;max-width:none;padding:0;line-height:1.2;display:flex;align-items:center;min-height:44px}
+ .nav-toggle{display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:44px;min-width:88px;padding:8px 0;font-size:14px;color:inherit}
+ .nav-toggle span{font-size:23px;font-weight:300;line-height:1}
+ #site-controls{position:absolute;left:14px;right:14px;top:66px;display:none;padding:15px 20px;background:#07152a;border:1px solid #7493ad;color:#e6f7ff;box-shadow:0 12px 25px #0005}
+ .site-header.menu-open #site-controls{display:block}
+ body[data-design="ink"] .site-header .nav{display:flex;flex-direction:column;gap:0}
+ body[data-design="ink"] .site-header .nav a{display:flex;font-size:17px;min-height:46px;color:#d1e7f2;white-space:normal}
+ body[data-design="ink"] .site-header .nav a[aria-current]{color:#9ff9ed}
+ body[data-design="ink"] .site-header .motion-toggle{display:block;width:100%;text-align:left;max-width:none;font-size:14px;line-height:1.4;min-height:48px;margin-top:8px;padding:10px 0;border-top:1px solid #3e5d78;color:#d1e7f2;white-space:normal}
+ .menu-open .nav-toggle span{transform:rotate(45deg)}
+}
+/* Stable-height bounds apply on every viewport, including browser-bar changes. */
+body:not(.reduced)[data-design="ink"] .ink-work-sheet{max-height:calc(100svh - 140px);overflow:auto;overscroll-behavior:auto;scrollbar-width:thin;scroll-padding:18px}
+body:not(.reduced)[data-design="ink"] .ink-contact{max-height:calc(100svh - 140px);overflow:auto;overscroll-behavior:auto;scrollbar-width:thin;scroll-padding:18px}
+@media(max-width:760px){
+ body:not(.reduced)[data-design="ink"] .ink-work-sheet{max-height:calc(100svh - 119px)}
+ body:not(.reduced)[data-design="ink"] .ink-contact{max-height:calc(100svh - 123px)}
+ #site-controls{max-height:calc(100svh - 90px);overflow:auto}
+}
+
+/* Use the same stable viewport as the camera fit, including browser-bar changes. */
+html[data-compact-landscape="true"] body:not(.reduced)[data-design="ink"] .poster-jayden{top:76px;font-size:max(32px,min(17.5vw,calc(52svh - 93px)));transform:rotate(-1deg)}
+html[data-compact-landscape="true"] body:not(.reduced)[data-design="ink"] .poster-realm{top:calc(52svh - 12px);font-size:max(32px,min(23vw,calc(46svh - 88px)));transform:rotate(1deg) scaleX(1.1)}

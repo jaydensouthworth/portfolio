@@ -1,0 +1,86 @@
+/* Interaction surfaces share an inset, a restrained palette, and a visible
+   keyboard/pressed state. Geometry and spacing do not change on interaction. */
+body[data-design="ink"]{--ui-hover:#b7eaff1a;--ui-pressed:#b7eaff2b;--ui-ring:#b6f4ef}
+.ink-work-sheet,.ink-case{--ui-hover:#8b4e2710;--ui-pressed:#8b4e2724;--ui-ring:#955b36;--accent:#814e2e}
+.ink-contact,.ink-background{--ui-hover:#55e9b81a;--ui-pressed:#55e9b82c;--ui-ring:#a4ffda}
+body.reduced[data-design="ink"] .ink-work-sheet{--ui-hover:#ffd9a51a;--ui-pressed:#ffd9a52c;--ui-ring:#ffdaa4;--accent:#ffdaa4}
+body[data-design="ink"] :is(a,button,summary){border-radius:3px;transition:background-color .14s ease-out,color .14s ease-out,border-color .14s ease-out;scroll-margin-block:90px 24px}
+body[data-design="ink"] :is(a,button,summary):focus-visible{outline:2px solid var(--ui-ring);outline-offset:3px}
+body[data-design="ink"] .realm h2[tabindex="-1"]:focus-visible{outline:2px solid var(--ui-ring);outline-offset:-2px;border-radius:3px}
+
+/* The email is one padded action, including its label and destination icon. */
+body[data-design="ink"] .ink-contact .contact-email{padding:18px 20px;column-gap:16px;border:1px solid #397d68;background-color:#092c302e;max-width:100%;transition:background-color .14s ease-out,border-color .14s ease-out}
+body[data-design="ink"] .contact-email strong{grid-column:1/-1;min-width:0;line-height:1.4}
+body[data-design="ink"] .contact-email svg{grid-row:1;grid-column:2;justify-self:end}
+body[data-design="ink"] .contact-email:focus-visible{outline-offset:-3px;background:#103b3c;border-color:#8bf1c6}
+body[data-design="ink"] .contact-links{gap:12px 20px;flex-wrap:wrap;background:none;box-shadow:none}
+body[data-design="ink"] .contact-links a{padding:10px 12px;min-height:44px;gap:13px;text-underline-offset:5px;text-decoration-thickness:1px}
+body[data-design="ink"] .ink-contact .about-actions{gap:12px;align-items:stretch;flex-wrap:wrap}
+body[data-design="ink"] .ink-contact .about-actions .text-button{padding:11px 12px;min-height:44px;line-height:1.5;text-align:left;background:none;border-color:#426b62;white-space:normal}
+
+/* Keep the original text alignment while giving the hit surfaces breathing room. */
+body[data-design="ink"] :is(.ink-case-link,.prototype-link,.ink-sheet-footer .text-button){padding:10px 12px;min-height:44px;line-height:1.5;white-space:normal;text-align:left}
+body[data-design="ink"] .ink-case-link{gap:12px;flex-shrink:0}
+body[data-design="ink"] .ink-index-entry h3 button{padding:9px 10px;min-height:44px;line-height:1.18;text-align:left;margin-left:-10px;width:calc(100% + 10px);align-items:center}
+body[data-design="ink"] .ink-index-entry h3 button .folio-arrow{margin-left:4px}
+body.reduced[data-design="ink"] .ink-index-entry h3 button{min-height:44px;padding:9px 10px}
+body[data-design="ink"] .ink-sheet-footer{align-items:center;gap:12px;padding:10px 0 16px}
+body[data-design="ink"] .ink-feature-bottom{gap:12px;flex-wrap:wrap}
+body[data-design="ink"] .prototype-link{max-width:260px}
+
+/* Secondary links remain text links, with their own compact padded surfaces. */
+body[data-design="ink"] :is(.external-link,.note-source,.reader-links a){display:inline-flex;align-items:center;max-width:100%;min-height:44px;padding:10px 12px;line-height:1.55;overflow-wrap:anywhere;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px;box-decoration-break:clone}
+body[data-design="ink"] .reader-links{gap:10px 16px;align-items:flex-start}
+body[data-design="ink"] .contact-explore{margin-block:24px}
+body[data-design="ink"] .contact-explore summary{min-height:48px;padding:12px 14px;line-height:1.5;list-style-position:inside;border:1px solid #3b685b}
+body[data-design="ink"] .contact-explore summary::marker{color:#7ddbb8}
+body[data-design="ink"] .contact-explore>div{padding:6px 0 0;gap:4px}
+body[data-design="ink"] .contact-explore button{padding:14px;min-height:60px;line-height:1.45;border:1px solid #2a544c;border-radius:3px}
+body[data-design="ink"] .contact-explore button span{line-height:1.55;margin-top:5px}
+body[data-design="ink"] .case-dialog .dialog-close{padding:11px 15px;min-height:48px;border:1px solid currentColor;line-height:1.4;filter:none}
+body[data-design="ink"] .case-dialog .dialog-close:focus-visible{outline-offset:-4px}
+body[data-design="ink"] .case-dialog :is(.note-source,.external-link){margin-left:-4px}
+body[data-design="ink"] .case-dialog .contact-explore button:focus-visible{outline-offset:-3px}
+
+/* Header and quiet Home actions keep their measured layout and hit bounds. */
+body[data-design="ink"] .site-header :is(.brand,.nav a,.motion-toggle,.nav-toggle){position:relative;isolation:isolate}
+@media(min-width:761px){body[data-design="ink"] .site-header .brand{padding:14px 0;min-height:44px}}
+body[data-design="ink"] .site-header :is(.brand,.nav a,.motion-toggle,.nav-toggle)::before{content:"";position:absolute;inset:2px -9px;z-index:-1;border-radius:3px;background:transparent;pointer-events:none;transition:background-color .14s ease-out}
+body[data-design="ink"] .entry-origin::after{inset:-10px -7px;border-radius:3px;z-index:-1;transition:background-color .14s ease-out}
+body[data-design="ink"] .entry-origin{isolation:isolate;max-width:100%}
+body:not(.reduced)[data-design="ink"] .entry-origin{max-width:280px;white-space:normal}
+body[data-design="ink"] .entry-origin:focus-visible{outline-offset:5px}
+body[data-design="ink"] .site-header :is(.brand,.nav a,.motion-toggle,.nav-toggle):focus-visible::before{background:var(--ui-hover)}
+body[data-design="ink"] .entry-origin:focus-visible::after{background:var(--ui-hover)}
+
+@media(hover:hover){
+ body[data-design="ink"] .ink-contact .contact-email:hover{background:#103b3c;border-color:#8bf1c6;color:#fff}
+ body[data-design="ink"] :is(.ink-case-link,.ink-index-entry h3 button,.prototype-link,.ink-sheet-footer .text-button,.contact-links a,.ink-contact .about-actions .text-button,.external-link,.note-source,.reader-links a,.contact-explore summary,.contact-explore button):hover{background:var(--ui-hover);text-decoration-thickness:2px}
+ body[data-design="ink"] .case-dialog .dialog-close:hover{background:var(--dialog-surface);box-shadow:inset 0 0 0 2px currentColor,0 9px 0 var(--dialog-surface)}
+ body[data-design="ink"] .site-header :is(.brand,.nav a,.motion-toggle,.nav-toggle):hover::before,body[data-design="ink"] .entry-origin:hover::after{background:var(--ui-hover)}
+}
+body[data-design="ink"] :is(.ink-case-link,.ink-index-entry h3 button,.prototype-link,.ink-sheet-footer .text-button,.contact-links a,.ink-contact .about-actions .text-button,.external-link,.note-source,.reader-links a,.contact-explore summary,.contact-explore button):focus-visible{background:var(--ui-hover);outline-offset:-2px}
+body[data-design="ink"] :is(.ink-case-link,.ink-index-entry h3 button,.prototype-link,.ink-sheet-footer .text-button,.contact-links a,.ink-contact .about-actions .text-button,.external-link,.note-source,.reader-links a,.contact-explore summary,.contact-explore button):active{background:var(--ui-pressed)}
+body[data-design="ink"] .ink-contact .contact-email:active{background:#18544e;border-color:#b3ffdf}
+body[data-design="ink"] .site-header :is(.brand,.nav a,.motion-toggle,.nav-toggle):active::before,body[data-design="ink"] .entry-origin:active::after{background:var(--ui-pressed)}
+body[data-design="ink"] .case-dialog .dialog-close:active{box-shadow:inset 0 0 0 3px currentColor,0 9px 0 var(--dialog-surface)}
+body[data-design="ink"] .ink-poster .enter-button:active{background:#a2dedb;box-shadow:1px 1px 0 #d72ba8}
+body[data-design="ink"] :is(button,a,summary):active{transition:none}
+
+@media(max-width:760px){
+ body:not(.reduced)[data-design="ink"] .entry-origin{max-width:calc(100vw - 198px)}
+ body[data-design="ink"] .ink-contact .contact-email{padding:15px 14px;column-gap:10px}
+ body[data-design="ink"] .contact-links{gap:8px 14px;margin-block:10px 14px}
+ body[data-design="ink"] .ink-contact .about-actions .text-button{padding:10px;flex:1 1 120px}
+ body[data-design="ink"] .ink-sheet-footer{gap:10px;align-items:center}
+ body[data-design="ink"] .prototype-link{max-width:58%;font-size:11px}
+ body[data-design="ink"] .ink-sheet-footer .text-button{padding:10px 8px}
+ body[data-design="ink"] .ink-feature-bottom>.ink-stack{flex:1 1 100px}
+ body[data-design="ink"] .ink-case-link{padding:9px 10px}
+ body[data-design="ink"] .site-header .nav a{padding:11px 12px}
+ body[data-design="ink"] .site-header .motion-toggle{padding:12px;min-height:48px}
+ body[data-design="ink"] .site-header :is(.nav a,.motion-toggle)::before{inset:2px 0}
+ body[data-design="ink"] .case-dialog .dialog-close{padding:11px 14px}
+ body.reduced[data-design="ink"] .ink-feature-bottom{align-items:flex-start}
+}
+@media(prefers-reduced-motion:reduce){body[data-design="ink"] :is(a,button,summary),body[data-design="ink"] .site-header ::before,body[data-design="ink"] .entry-origin::after{transition:none}}

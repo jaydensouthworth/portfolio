@@ -1,0 +1,38 @@
+/* Cyan, magenta and violet overprint from the original portfolio.
+   Clean cartoon fills and hard color offsets; no distressed letter texture. */
+@font-face{font-family:'Realm Overprint';src:url('../assets/realm-overprint.woff') format('woff');font-style:italic;font-weight:900;font-display:swap}
+body[data-design="ink"] .poster-jayden{color:#e6f7ff;text-shadow:3px 4px 0 #07bccc,7px 8px 0 #e601c0,12px 14px 0 #482896}
+body[data-design="ink"] .poster-jayden .letter-0{transform:rotate(-3.4deg) translateY(.024em)}
+body[data-design="ink"] .poster-jayden .letter-2{transform:rotate(3.8deg) translateY(-.019em)}
+body[data-design="ink"] .poster-jayden .letter-4{transform:rotate(-2deg) translateY(.019em)}
+body[data-design="ink"] .poster-jayden .letter-6{color:#e601c0;transform:rotate(16deg) translate(.015em,-.04em);text-shadow:-3px 3px 0 #07bccc,5px 6px 0 #482896}
+body[data-design="ink"] .poster-jayden .letter-7{transform:rotate(3deg) translateY(.028em)}
+body[data-design="ink"] .poster-realm{font-family:'Realm Overprint','Realm Display',Impact,sans-serif;font-weight:900;font-style:italic;font-size:min(27.3vw,46svh);letter-spacing:-.02em;color:#07bccc;-webkit-text-stroke:.65px #bceef4;text-shadow:5px 5px 0 #e601c0,10px 10px 0 #e9019a,16px 15px 0 #482896}
+body[data-design="ink"] .poster-realm .letter{position:relative;font-weight:900}
+body[data-design="ink"] .poster-realm .letter-0{transform:rotate(-3.4deg) translateY(.012em)}
+body[data-design="ink"] .poster-realm .letter-1{transform:rotate(1.8deg) translateY(.035em)}
+body[data-design="ink"] .poster-realm .letter-2{transform:rotate(-4.5deg) translateY(-.028em)}
+body[data-design="ink"] .poster-realm .letter-3{transform:rotate(3.5deg) translateY(.025em)}
+body[data-design="ink"] .poster-realm .letter-4{transform:rotate(-1.2deg) translateY(-.005em)}
+body[data-design="ink"] .ink-poster .enter-button{border-color:#e601c0;color:#e6f7ff;transform:rotate(-2deg);box-shadow:none;text-decoration:underline;text-decoration-color:#07bccc;text-decoration-thickness:1px;text-underline-offset:9px}
+body[data-design="ink"] .ink-poster .eyebrow>span{color:#76c9d6}
+@media(max-width:760px){
+ body[data-design="ink"] .poster-jayden{text-shadow:2px 3px 0 #07bccc,4px 5px 0 #e601c0,7px 8px 0 #482896}
+ body[data-design="ink"] .poster-jayden .letter-6{text-shadow:-2px 2px 0 #07bccc,3px 4px 0 #482896}
+ body[data-design="ink"] .poster-realm{font-size:56vw;transform:rotate(1deg) scaleX(.67);text-shadow:3px 3px 0 #e601c0,6px 6px 0 #e9019a,10px 10px 0 #482896;-webkit-text-stroke:.5px #bceef4}
+}
+@media(max-width:760px) and (max-height:760px){body[data-design="ink"] .poster-realm{transform:rotate(1deg) scale(.67,.82)}}
+@media(max-width:760px) and (max-height:650px){body[data-design="ink"] .poster-realm{transform:rotate(1deg) scale(.67,.72)}}
+body.reduced[data-design="ink"] .poster-realm{font-size:clamp(70px,33vw,240px);transform:none}
+body.reduced[data-design="ink"] .poster-jayden{text-shadow:2px 3px 0 #07bccc,4px 5px 0 #e601c0,7px 8px 0 #482896}
+body.reduced[data-design="ink"] .poster-realm{text-shadow:3px 3px 0 #e601c0,6px 6px 0 #482896}
+@media(prefers-reduced-motion:reduce){body[data-design="ink"] .ink-poster .letter{transform:none}}
+
+/* Unified blue-violet color grade: colored shadows, clear pale labels. */
+body[data-design="ink"][data-world="0"]{--bg:#493c8d;--text:#f5f0ff;--muted:#e5e5ff;background:#514394}
+body[data-design="ink"][data-world="0"] .site-header{background:linear-gradient(#463e8ee8,#463e8e00)}
+body[data-design="ink"] .ink-poster .eyebrow{color:#f2efff}
+body[data-design="ink"] .ink-poster .eyebrow>span{color:#d4f8ff}
+body[data-design="ink"] .poster-realm{color:#37d4df;-webkit-text-stroke:.65px #bdf7fc}
+body.reduced[data-design="ink"] .ink-poster{background:linear-gradient(135deg,#365295,#564293 55%,#714186)}
+body.reduced[data-design="ink"] .site-header{background:#463e8e}
