@@ -7,7 +7,7 @@ The project combines a Canvas2D environment with HTML content and an SVG portal 
 ## Features
 
 - Three dimensional environments with procedural materials and localized animation
-- Project notes for Beertraunteer, TEnmo, Vendo-Matic 800, and Aethel
+- Project notes for Store Shoppers, TEnmo, Vendo-Matic 800, and Aethel
 - A continuous Reading view with the same content and color identities
 - Keyboard navigation, visible focus states, accessible dialogs, and reduced-motion support
 - Responsive layouts and separate touch and desktop travel pacing

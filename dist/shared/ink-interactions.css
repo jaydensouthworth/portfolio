@@ -84,3 +84,8 @@ body[data-design="ink"] :is(button,a,summary):active{transition:none}
  body.reduced[data-design="ink"] .ink-feature-bottom{align-items:flex-start}
 }
 @media(prefers-reduced-motion:reduce){body[data-design="ink"] :is(a,button,summary),body[data-design="ink"] .site-header ::before,body[data-design="ink"] .entry-origin::after{transition:none}}
+
+/* Featured project source and notes share one padded action row. */
+body[data-design="ink"] .ink-project-actions{display:flex;align-items:center;flex-wrap:wrap;gap:8px}
+body[data-design="ink"] .ink-feature-bottom:has(.ink-project-actions)>.ink-stack{flex-basis:100%;max-width:none}
+body[data-design="ink"] #case-shopper .external-link{color:#814e2e;gap:8px}

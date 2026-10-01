@@ -16,7 +16,7 @@
         "HTML + CSS",
         "Jest"
       ],
-      "example": "In Beertraunteer, I worked on frontend UX, components, tests, and API integration."
+      "example": "Store Shoppers uses server-rendered HTML and HTMX for catalog, basket, and manager interactions."
     },
     {
       "name": "Application",
@@ -92,24 +92,30 @@
       }
     },
     {
-      "id": "beer",
-      "name": "Beertraunteer",
-      "type": "Full-stack web application",
-      "summary": "A responsive brewery experience connecting discovery, beers, and events.",
+      "id": "shopper",
+      "name": "Store Shoppers",
+      "type": "Neighborhood-market demo",
+      "summary": "A local market, from basket to order.",
       "stack": [
-        "React",
-        "Java",
-        "PostgreSQL"
+        "Go",
+        "HTMX",
+        "SQLite"
       ],
-      "detail": "A brewery application with custom brewery, event, and beer information, plus brewery search by type. A React interface communicates with a REST backend using Spring Data JPA and Spring Security.",
-      "contribution": "I designed and developed the frontend UX, built React components and tests, and integrated frontend communication with the backend API.",
+      "detail": "A neighborhood-market demo connecting a searchable storefront and simulated checkout with manager inventory controls and an order queue.",
+      "contribution": "Storefront, inventory tools, and order workflow.",
       "focus": [
-        "Frontend UX",
-        "Responsive components",
-        "API integration"
+        "Server-rendered interactions",
+        "Inventory consistency",
+        "Order workflow"
       ],
+      "source": "https://github.com/jaydensouthworth/storeshoppers",
+      "status": "Personal demo · Fake products and simulated orders. No payments or real fulfillment.",
       "notes": {
-        "overview": "Beertraunteer brings brewery, beer, and event information into one application. Users can search for breweries by type and explore the related information. A React interface communicates with a REST backend using Spring Data JPA and Spring Security."
+        "overview": "Store Shoppers is a neighborhood-market demo built with Go, HTMX and SQLite. A searchable catalog leads to a basket and simulated checkout; a manager workspace handles inventory adjustments and an order queue.",
+        "detail": {
+          "title": "Keeping the order and the shelves in sync",
+          "body": "One Go server renders HTML, with HTMX updating forms and page fragments. Checkout saves the order and deducts stock in one SQLite transaction. Repeat submissions return the existing order; inventory adjustments keep an audit trail, and fulfillment changes follow guarded transitions."
+        }
       }
     }
   ],
