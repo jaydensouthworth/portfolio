@@ -25,3 +25,31 @@ body:not(.reduced)[data-design="ink"] .ink-contact{max-height:calc(100svh - 140p
 /* Use the same stable viewport as the camera fit, including browser-bar changes. */
 html[data-compact-landscape="true"] body:not(.reduced)[data-design="ink"] .poster-jayden{top:76px;font-size:max(32px,min(17.5vw,calc(52svh - 93px)));transform:rotate(-1deg)}
 html[data-compact-landscape="true"] body:not(.reduced)[data-design="ink"] .poster-realm{top:calc(52svh - 12px);font-size:max(32px,min(23vw,calc(46svh - 88px)));transform:rotate(1deg) scaleX(1.1)}
+
+/* Mobile Work starts as a horizontal shelf, not a second vertical viewport. */
+.work-dock,.work-dock-footer{display:none}
+#work-folio[hidden],.work-dock[hidden],.work-project-rail[hidden],.work-dock-hint[hidden],.work-dock-footer[hidden]{display:none!important}
+body:not(.reduced)[data-design="ink"] .work[data-work-compact="true"]{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-end;padding:94px max(18px,env(safe-area-inset-right)) max(20px,env(safe-area-inset-bottom)) max(18px,env(safe-area-inset-left));gap:0;pointer-events:none}
+.work[data-work-compact="true"] .work-dock{display:block;order:1;flex:none;min-width:0;padding:10px 12px 11px;border:1px solid #d1b3a0;background:#fff5e6;color:#361d2d;box-shadow:4px 5px 0 #30142c24;--ui-ring:#955b36;pointer-events:auto}
+.work-dock-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;min-width:0}
+.work-dock-heading h2{font:400 24px/1.1 Georgia,serif;letter-spacing:-.045em;margin:0;min-width:0;color:#361d2d}
+.work-dock-heading h2>span{color:#b76c39}
+.work-disclosure{display:flex;align-items:center;justify-content:center;gap:9px;min-height:44px;padding:10px 11px;border:1px solid #ba927c;border-radius:3px;font:600 12px/1.4 Arial,sans-serif;color:#75492e;flex:none}
+.work-disclosure i{font:normal 20px/1 Arial,sans-serif}
+.work-project-rail{display:flex;align-items:stretch;gap:8px;list-style:none;margin:10px -2px 0;padding:2px 2px 8px;overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain;overscroll-behavior-y:auto;touch-action:auto;scrollbar-width:thin;scrollbar-color:#b18a70 transparent;scroll-padding-inline:2px}
+.work-project-rail li{flex:0 0 176px;min-width:0}
+.work-project-rail button{position:relative;display:flex;flex-direction:column;justify-content:center;gap:5px;width:100%;min-height:70px;height:100%;padding:12px 27px 12px 12px;border:1px solid #cdaa91;border-radius:3px;background:#f4e5d1;color:#432939;text-align:left;line-height:1.35}
+.work-project-rail strong{font:600 15px/1.3 Arial,sans-serif}
+.work-project-rail button>span:not(.work-rail-arrow){font:10px/1.4 Arial,sans-serif;color:#775747}
+.work-project-rail .work-rail-arrow{position:absolute;right:10px;top:12px;width:12px;height:12px;color:#94613e}
+.work-dock-hint{font:10px/1.4 Arial,sans-serif;color:#795744;margin:5px 0 0}
+.work[data-work-compact="true"][data-work-expanded="true"] .work-dock{border-bottom:0;box-shadow:none}
+body:not(.reduced)[data-design="ink"] .work[data-work-compact="true"] .ink-work-sheet{order:2;flex:1 1 auto;min-height:0;width:100%;max-height:none;overflow:auto;overscroll-behavior-y:auto;padding:0 17px;box-shadow:none;border-top:0;border-bottom:0;scroll-padding:14px}
+.work[data-work-compact="true"] .ink-sheet-heading{display:none}
+.work[data-work-compact="true"] .work-dock-footer{display:flex;order:3;flex:none;justify-content:flex-end;padding:5px 12px 9px;background:#fff5e6;border:1px solid #d1b3a0;border-top:1px solid #d1b3a0;pointer-events:auto}
+.work-dock-footer button{display:flex;align-items:center;gap:20px;min-height:44px;padding:10px 12px;font:600 12px/1.4 Arial,sans-serif;color:#75492e;border:1px solid #ba927c;border-radius:3px}
+body[data-design="ink"] .work-dock :is(button,h2):focus-visible,body[data-design="ink"] .work-dock-footer button:focus-visible{outline:2px solid #955b36;outline-offset:-3px}
+@media(hover:hover){.work-dock button:hover,.work-dock-footer button:hover{background:#efdbc2}}
+@media(max-width:360px){.work-dock-heading h2{font-size:22px}.work-dock-hint{font-size:9px}.work-project-rail li{flex-basis:166px}}
+
+.work-dock button:active,.work-dock-footer button:active{background:#ead2b4}
