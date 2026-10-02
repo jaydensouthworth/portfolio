@@ -11,7 +11,7 @@ The project combines a Canvas2D environment with HTML content and an SVG portal 
 - A continuous Reading view with the same content and color identities
 - Keyboard navigation, visible focus states, accessible dialogs, and reduced-motion support
 - Responsive layouts and separate touch and desktop travel pacing
-- A compact mobile project shelf with an expandable folio and a direct path to Contact
+- A full-size mobile folio with horizontal project browsing and uninterrupted vertical world travel
 
 ## Structure
 
