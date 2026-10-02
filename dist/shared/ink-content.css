@@ -49,3 +49,10 @@ body.reduced[data-design="ink"] .note-focus,body.reduced[data-design="ink"] .rea
 body.reduced[data-design="ink"] .site-header .nav-toggle{color:#e1eef6}
 
 body.reduced[data-design="ink"] .reader-prototype .case-intro,body.reduced[data-design="ink"] .reader-prototype .prototype-section p{max-width:72ch}
+
+/* Source-linked projects lead the folio in both presentation modes. */
+.ink-prototype-lead{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:4px 0 8px;border-top:1px solid #d1b3a0}
+body.reduced[data-design="ink"] .ink-prototype-lead{display:none}
+
+.ink-prototype-lead .ink-case-link{margin-top:0}
+.ink-sheet-footer{justify-content:flex-end}
