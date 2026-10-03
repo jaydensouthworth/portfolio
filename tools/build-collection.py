@@ -50,6 +50,7 @@ start=html.index('<header class="site-header">');end=html.index('</header>',star
 header=html[start:end].replace('<header class=','<header role="banner" class=')
 html=html[:start]+html[end:]
 html=html.replace('<div class="scene">','<div class="scene"><div id="travel-input" aria-hidden="true"></div>'+header,1)
+html=html.replace('</head>', '<link rel="stylesheet" href="/shared/ink-showcase.css?v=143"></head>')
 (root/'index.html').write_text(html)
 redirect='''<!doctype html><html lang="en"><meta charset="utf-8"><meta name="robots" content="noindex"><title>Jayden’s Realm</title><script>location.replace('/'+location.search+(location.hash==='#about'?'#contact':location.hash));</script><p><a href="/">Open Jayden’s Realm</a></p></html>'''
 for key in ['ink','archive','eclipse','counterform','garden','tidal','checkpoint']:

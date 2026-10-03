@@ -45,14 +45,14 @@
       "id": "shopper",
       "name": "Store Shoppers",
       "type": "Neighborhood-market demo",
-      "summary": "A local market, from basket to order.",
+      "summary": "A neighborhood market, from storefront to picking.",
       "stack": [
         "Go",
         "HTMX",
         "SQLite"
       ],
-      "detail": "A neighborhood-market demo connecting a searchable storefront and simulated checkout with manager inventory controls and an order queue.",
-      "contribution": "Storefront, inventory tools, and order workflow.",
+      "detail": "A neighborhood-market demo joining a storefront and simulated checkout with store management and a phone-first employee picking app.",
+      "contribution": "Customer storefront, management dashboard, and phone-first picking workflow.",
       "focus": [
         "Server-rendered interactions",
         "Inventory consistency",
@@ -61,7 +61,7 @@
       "source": "https://github.com/jaydensouthworth/storeshoppers",
       "status": "Personal demo · Fake products and simulated orders. No payments or real fulfillment.",
       "notes": {
-        "overview": "Store Shoppers is a neighborhood-market demo built with Go, HTMX and SQLite. A searchable catalog leads to a basket and simulated checkout; a manager workspace handles inventory adjustments and an order queue.",
+        "overview": "Store Shoppers is a neighborhood-market demo built with Go, HTMX and SQLite. Customers browse products and place simulated orders; a management dashboard oversees stock and orders; an employee app brings product scanning and quantity checks into the aisle.",
         "detail": {
           "title": "Keeping the order and the shelves in sync",
           "body": "One Go server renders HTML, with HTMX updating forms and page fragments. Checkout saves the order and deducts stock in one SQLite transaction. Repeat submissions return the existing order; inventory adjustments keep an audit trail, and fulfillment changes follow guarded transitions."
@@ -156,8 +156,25 @@
   "identityCaption": "Developer · Problem solver",
   "projectOrder": [
     "shopper",
+    "castledecks",
     "aethel",
     "tenmo",
     "vendo"
-  ]
+  ],
+  "castledecks": {
+    "id": "castledecks",
+    "name": "Castledecks",
+    "type": "Browser game prototype",
+    "summary": "Defend a keep. Build an army. Shape a campaign.",
+    "stack": [
+      "JavaScript",
+      "Canvas",
+      "HTML + CSS"
+    ],
+    "detail": "A browser-based archery and army campaign prototype. Defend a keep, recruit allies, equip ability cards, and progress through a campaign.",
+    "contribution": "A personal browser game experiment.",
+    "status": "Playable prototype. Presentation, balance, and mobile input are still developing.",
+    "demo": "https://castledecks-castledecks-pef3gg-472347-2-25-70-220.sslip.io/",
+    "source": "https://github.com/jaydensouthworth/castledecks"
+  }
 }
